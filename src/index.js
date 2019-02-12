@@ -193,7 +193,7 @@ class App extends Component {
             onChange={e => this.setState({data: e.target.value})}
             className={highlight === 'data' ? styles.highlight : null}
           />
-          <button onClick={this.makeRequest}>Make request</button>
+          <button className={styles.button} onClick={this.makeRequest}>Make request</button>
         </div>
         <div className={styles.rightPane}>
           <div className={classnames(styles.results, {[styles.notIdealState]: view === ERROR})}>

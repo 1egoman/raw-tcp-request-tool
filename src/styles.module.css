@@ -39,6 +39,23 @@ textarea:focus { border-color: royalblue; }
 
 .highlight { border-color: red; }
 
+.button {
+  margin-top: 24px;
+  border: 2px solid #aaa;
+  cursor: pointer;
+  outline: none;
+  border-radius: 4px;
+  background-color: royalblue;
+  color: #fff;
+  font-family: 'Source Code Pro', Insonsolata, "Courier New", monospace;
+  font-weight: bold;
+  padding: 8px;
+  transition: all 100ms ease-in-out;
+}
+.button:hover { opacity: 0.95; }
+.button:active { opacity: 1; }
+.button:focus { border-color: #ddd; }
+
 .container {
   width: 100%;
   max-width: 800px;
