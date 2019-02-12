@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
+
+body {
+  color: #fff;
+  background-color: #222223;
+  font-family: 'Source Code Pro', Insonsolata, "Courier New", monospace;
+}
+
+input {
+  background-color: #eee;
+  color: #333;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+
+  font-family: 'Source Code Pro', Insonsolata, "Courier New", monospace;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 32px;
+  font-size: 18px;
+  outline: none;
+}
+input:focus { border-color: royalblue; }
+
+textarea {
+  background-color: #eee;
+  color: #333;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+
+  font-family: 'Source Code Pro', Insonsolata, "Courier New", monospace;
+  padding: 8px;
+  font-size: 18px;
+  outline: none;
+  resize: vertical;
+  min-height: 200px;
+}
+textarea:focus { border-color: royalblue; }
+
+.highlight { border-color: red; }
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.leftPane, .rightPane {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+@media (min-width: 800px) {
+  .container {
+    max-width: none;
+    flex-direction: row;
+  }
+  .leftPane, .rightPane {
+    width: 50%;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+.hostPortGroup {
+  margin-bottom: 24px;
+}
+.hostPortGroup label { margin-right: 12px; }
+.hostPortGroup label:last-of-type { margin-left: 24px; }
+
+.hostPortGroup .portType {
+  color: #fff;
+  font-weight: bold;
+  margin-left: 12px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+
+  min-height: 300px;
+  margin-top: 24px;
+  font-size: 18px;
+  border: 2px solid #aaa;
+
+  padding: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+}
+.results pre {
+  margin: 0px;
+  font-family: 'Source Code Pro', Insonsolata, "Courier New", monospace;
+}
+
+@media (min-width: 800px) {
+  .results {
+    margin-top: 0px;
+  }
+}
+
+.results.notIdealState {
+  background-color: #222;
+  align-items: center;
+  justify-content: center;
+}
